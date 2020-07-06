@@ -1,6 +1,6 @@
 # Create Amine Module
 
-Create Amine Module is a CLI for quickly and easily create "Amine" Modules.
+Create Amine Module is a CLI for quickly and easily creating "Amine" Modules.
 "Amine" Module is a pattern we follow within our team @Axa to create new Modules on our React Application.
 
 ## Installation

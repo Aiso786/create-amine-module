@@ -19,7 +19,8 @@ const run = async () => {
   const moduleNameLower = _.lowerCase(moduleName);
 
   console.log("****** Copy templates to new Module ******");
-  const templateFilesDir = path.join(process.cwd(), "templates", "Module");
+  const templateFilesDir = path.join(__dirname, "templates", "Module");
+  console.log("templateFilesDir", templateFilesDir);
   try {
     fs.copySync(templateFilesDir, moduleName);
     console.log("****** Templates copy completed ! ******");

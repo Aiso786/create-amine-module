@@ -1,6 +1,6 @@
 {
   "name": "create-amine-module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CLI to create \"Amine\" React Modules",
   "main": "index.js",
   "repository": {

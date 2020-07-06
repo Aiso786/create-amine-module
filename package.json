@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "CLI to create \"Amine\" React Modules",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aiso786/create-amine-module.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

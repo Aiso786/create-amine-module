@@ -1,0 +1,23 @@
+@import 'variables';
+
+.@module@ {
+  .filterPanel {
+    min-width: 350px;
+  }
+
+  .filterPanel,
+  .result {
+    padding: 10px;
+  }
+
+  .result {
+    flex: 1;
+  }
+
+  > .d-flex {
+    flex-direction: column;
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+    }
+  }
+}

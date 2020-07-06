@@ -1,0 +1,30 @@
+@import 'variables';
+
+.@module@form {
+  @include media-breakpoint-up(lg) {
+    margin: auto;
+    max-width: 1224px;
+  }
+  form {
+    @include media-breakpoint-up(md) {
+      max-width: 768px;
+    }
+  }
+  .af-panel--new {
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+  }
+  .af-panel__content {
+    @include media-breakpoint-down(md) {
+      padding: 0;
+    }
+  }
+  &__footer {
+    @include media-breakpoint-down(xs) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-# Foobar
+# Create Amine Module
 
 Create Amine Module is a CLI for quickly and easily create "Amine" Modules.
 "Amine" Module is a pattern we follow within our team @Axa to create new Modules on our React Application.
@@ -8,17 +8,13 @@ Create Amine Module is a CLI for quickly and easily create "Amine" Modules.
 Install it globally.
 
 ```bash
-yarn add -g foobar
+yarn add -g create-amine-module
 ```
 
 ## Usage
 
 ```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+create-amine-module
 ```
 
 ## Contributing

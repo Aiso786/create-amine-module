@@ -1,7 +1,7 @@
 {
   "name": "create-amine-module",
   "version": "1.0.0",
-  "description": "CLI to create Amine modules",
+  "description": "CLI to create \"Amine\" React Modules",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,21 +12,16 @@
     "CLI"
   ],
   "author": "Sohail Choudhry",
-  "license": "ISC",
+  "license": "MIT",
+  "preferGlobal": true,
+  "bin": "./cli.js",
   "dependencies": {
-    "@octokit/auth-basic": "^1.4.5",
-    "@octokit/rest": "^18.0.0",
     "chalk": "^4.1.0",
     "clear": "^0.1.0",
-    "clui": "^0.3.6",
-    "configstore": "^5.0.1",
     "figlet": "^1.4.0",
     "fs-extra": "^9.0.1",
     "inquirer": "^7.3.0",
     "lodash": "^4.17.15",
-    "minimist": "^1.2.5",
-    "replace-in-file": "^6.1.0",
-    "simple-git": "^2.11.0",
-    "touch": "^3.1.0"
+    "replace-in-file": "^6.1.0"
   }
 }

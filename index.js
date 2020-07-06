@@ -18,22 +18,20 @@ const run = async () => {
   const moduleNameUpper = _.upperCase(moduleName);
   const moduleNameLower = _.lowerCase(moduleName);
 
-  console.log("Copy templates to new Module");
+  console.log("****** Copy templates to new Module ******");
   const templateFilesDir = path.join(process.cwd(), "templates", "Module");
   try {
-    fs.copySync(templateFilesDir, path.join("temp", moduleName));
-    console.log("Templates copy completed !");
+    fs.copySync(templateFilesDir, moduleName);
+    console.log("****** Templates copy completed ! ******");
   } catch (err) {
     console.error(err);
   }
 
-  console.log("Rename directories");
-  files.renameDirs(path.join(process.cwd(), "temp", moduleName), moduleName);
+  console.log("****** Rename directories ******");
+  files.renameDirs(path.join(process.cwd(), moduleName), moduleName);
 
-  console.log("Get all files from new Module and rename them");
-  const newFiles = files.getAllFiles(
-    path.join(process.cwd(), "temp", moduleName)
-  );
+  console.log("****** Get all files from new Module and rename them ******");
+  const newFiles = files.getAllFiles(path.join(process.cwd(), moduleName));
   _.forEach(newFiles, (filePath) => {
     console.log(filePath);
     fs.renameSync(
@@ -46,26 +44,26 @@ const run = async () => {
     );
   });
 
-  console.log("Replace Upper First case content in files");
+  console.log("****** Replace Upper First case content in files ******");
   files.replaceContent(
-    path.join(process.cwd(), "temp", moduleName),
+    path.join(process.cwd(), moduleName),
     /@Module@/g,
     moduleName
   );
 
-  console.log("Replace Upper case content in files");
+  console.log("****** Replace Upper case content in files ******");
   files.replaceContent(
-    path.join(process.cwd(), "temp", moduleNameUpper),
+    path.join(process.cwd(), moduleNameUpper),
     /@MODULE@/g,
     moduleNameUpper
   );
 
-  console.log("Replace Lower case content in files");
+  console.log("****** Replace Lower case content in files ******");
   files.replaceContent(
-    path.join(process.cwd(), "temp", moduleNameLower),
+    path.join(process.cwd(), moduleNameLower),
     /@module@/g,
     moduleNameLower
   );
 };
 
-run();
+module.exports = run;
